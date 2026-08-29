@@ -1,0 +1,29 @@
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[project]
+name = "skill-eval"
+version = "0.1.0"
+description = "Score tool-calling: schema, selection, refusal. No agent framework required."
+readme = "README.md"
+license = "MIT"
+requires-python = ">=3.10"
+authors = [{ name = "vk-ai" }]
+keywords = ["llm", "tools", "eval"]
+[project.urls]
+Homepage = "https://github.com/vk-ai/skill-eval"
+Issues = "https://github.com/vk-ai/skill-eval/issues"
+
+[project.optional-dependencies]
+dev = ["pytest>=8.0"]
+
+[tool.hatch.build.targets.wheel]
+packages = ["src/skill_eval"]
+
+[tool.hatch.build.targets.wheel.sources]
+"src/skill_eval" = "skill_eval"
+
+[tool.pytest.ini_options]
+pythonpath = ["src"]
+testpaths = ["tests"]

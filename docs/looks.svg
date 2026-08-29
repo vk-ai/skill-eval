@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="960" height="540" viewBox="0 0 960 540" role="img" aria-label="skill-eval scorecard">
+  <rect width="960" height="540" fill="#f4efe6"/>
+  <text x="48" y="56" font-family="Georgia, serif" font-size="28" fill="#1c1917">What the scorecard looks like</text>
+  <g>
+    <rect x="48" y="120" width="260" height="220" rx="16" fill="#fff" stroke="#1c1917" stroke-width="1.5"/>
+    <text x="178" y="180" text-anchor="middle" font-family="Georgia, serif" font-size="42" fill="#1c1917">1.00</text>
+    <text x="178" y="220" text-anchor="middle" font-family="ui-monospace, monospace" font-size="14" fill="#78716c">selection</text>
+    <text x="178" y="300" text-anchor="middle" font-family="Georgia, serif" font-size="13" fill="#44403c">right tool</text>
+    <rect x="350" y="120" width="260" height="220" rx="16" fill="#fff" stroke="#1c1917" stroke-width="1.5"/>
+    <text x="480" y="180" text-anchor="middle" font-family="Georgia, serif" font-size="42" fill="#1c1917">1.00</text>
+    <text x="480" y="220" text-anchor="middle" font-family="ui-monospace, monospace" font-size="14" fill="#78716c">schema</text>
+    <text x="480" y="300" text-anchor="middle" font-family="Georgia, serif" font-size="13" fill="#44403c">required keys only</text>
+    <rect x="652" y="120" width="260" height="220" rx="16" fill="#1c1917"/>
+    <text x="782" y="180" text-anchor="middle" font-family="Georgia, serif" font-size="42" fill="#f4efe6">1.00</text>
+    <text x="782" y="220" text-anchor="middle" font-family="ui-monospace, monospace" font-size="14" fill="#c4a574">refusal</text>
+    <text x="782" y="300" text-anchor="middle" font-family="Georgia, serif" font-size="13" fill="#a8a29e">said no when it should</text>
+  </g>
+  <text x="48" y="400" font-family="ui-monospace, monospace" font-size="14" fill="#44403c">{ "n": 3, "selection": 1.0, "schema": 1.0, "refusal": 1.0 }</text>
+  <text x="48" y="500" font-family="Georgia, serif" font-size="14" fill="#78716c">Final-answer evals miss these three failures. This is the earlier scorecard.</text>
+</svg>

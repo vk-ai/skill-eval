@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="960" height="540" viewBox="0 0 960 540" role="img" aria-label="Install skill-eval">
+  <rect width="960" height="540" fill="#f4efe6"/>
+  <text x="48" y="56" font-family="Georgia, serif" font-size="28" fill="#1c1917">Install</text>
+  <rect x="48" y="88" width="400" height="380" rx="16" fill="#fff" stroke="#1c1917" stroke-width="1.5"/>
+  <text x="72" y="128" font-family="Georgia, serif" font-size="20" fill="#1c1917">New project</text>
+  <text x="72" y="176" font-family="ui-monospace, monospace" font-size="14" fill="#44403c">pip install -e ".[dev]"</text>
+  <text x="72" y="204" font-family="ui-monospace, monospace" font-size="14" fill="#44403c">pytest</text>
+  <text x="72" y="232" font-family="ui-monospace, monospace" font-size="14" fill="#44403c">python examples/quickstart.py</text>
+  <rect x="512" y="88" width="400" height="380" rx="16" fill="#1c1917"/>
+  <text x="536" y="128" font-family="Georgia, serif" font-size="20" fill="#f4efe6">Existing project</text>
+  <text x="536" y="176" font-family="ui-monospace, monospace" font-size="14" fill="#c4a574">pip install skill-eval</text>
+  <text x="536" y="220" font-family="ui-monospace, monospace" font-size="13" fill="#f4efe6">from skill_eval import score, ToolSpec</text>
+  <text x="536" y="256" font-family="ui-monospace, monospace" font-size="13" fill="#f4efe6">print(score(tools, cases, calls))</text>
+</svg>
