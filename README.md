@@ -48,4 +48,35 @@ print(score(
 ).as_dict())
 ```
 
+## With vs without skill (A/B)
+
+Authors ask: *does offering this skill actually help, and did the agent load it?*
+Run the same cases twice and measure **lift** + **trigger rate**:
+
+```python
+from skill_eval import Call, Case, SkillSpec, ToolSpec, compare_skill, run_ab
+
+tools = [ToolSpec("search", required=("q",))]
+cases = [
+    Case("1", "find trains", "call", tool="search", required_args={"q": "trains"}),
+    Case("2", "write a poem", "refuse"),
+]
+skill = SkillSpec("web-search", text="For lookup questions, call search with q=...")
+
+def agent(case, offered):
+    # Wire to your model/CLI. offered is SkillSpec or None.
+    if offered is None:
+        return Call(None, {}, refused=case.expect == "refuse")
+    if case.expect == "refuse":
+        return Call(None, {}, refused=True)
+    return Call("search", {"q": "trains"})
+
+report = run_ab(tools, cases, skill, agent)
+print(report.lift)                 # selection / schema / refusal deltas
+print(report.with_skill.trigger_rate)
+```
+
+Or score pre-recorded call lists with `compare_skill(..., calls_with=..., calls_without=..., triggered=...)`.
+Still zero dependencies — your agent callable owns any CLI/network I/O.
+
 MIT. Python 3.10+.
